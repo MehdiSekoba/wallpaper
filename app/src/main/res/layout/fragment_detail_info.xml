@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:paddingVertical="@dimen/_12mdp"
+    tools:context=".ui.detail_info.DetailInfoFragment"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+   >
+
+    <!--divider-->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="@dimen/_60mdp"
+        android:layout_height="@dimen/_2mdp"
+        android:background="@color/material_drawer_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--avatar-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/userAvatarImg"
+        android:layout_width="@dimen/_65mdp"
+        android:layout_height="@dimen/_65mdp"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:shapeAppearanceOverlay="@style/RoundImageViewProfile"
+        tools:src="@tools:sample/backgrounds/scenic" />
+    <!--Name-->
+    <TextView
+        android:id="@+id/userNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Raisin_Black"
+        app:layout_constraintBottom_toBottomOf="@id/userAvatarImg"
+        app:layout_constraintStart_toEndOf="@id/userAvatarImg"
+        app:layout_constraintTop_toTopOf="@id/userAvatarImg"
+        tools:text="@string/permanently_denied_permissions" />
+    <!--Count-->
+    <TextView
+        android:id="@+id/userPhotosCountTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_4mdp"
+        android:textAppearance="@style/TextAppearance_medium"
+        android:textColor="@color/Raisin_Black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/userAvatarImg"
+        app:layout_constraintTop_toBottomOf="@id/userNameTxt"
+        tools:text="300 photos" />
+<!--bio-->
+    <TextView
+        android:id="@+id/Txt_bio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:textAppearance="@style/TextAppearance_medium"
+        android:textColor="@color/Raisin_Black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/userAvatarImg"
+        app:layout_constraintTop_toBottomOf="@id/userPhotosCountTxt"
+        tools:text="@string/_4k_wallpaper" />
+    <!--location-->
+    <TextView
+        android:id="@+id/txt_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance_medium"
+        android:textColor="@color/Raisin_Black"
+        app:drawableStartCompat="@drawable/location_tick"
+        app:drawableTint="@color/gray_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/userAvatarImg"
+        app:layout_constraintTop_toBottomOf="@id/Txt_bio" />
+
+    <!--like-->
+    <TextView
+        android:id="@+id/likesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/_4mdp"
+        android:textAppearance="@style/TextAppearance_medium"
+        android:textColor="@color/Raisin_Black"
+        app:drawableStartCompat="@drawable/heart"
+        app:drawableTint="@color/gray_700"
+        tools:text="2000000" />
+    <!--View-->
+    <TextView
+        android:id="@+id/viewsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/_5mdp"
+        android:textAppearance="@style/TextAppearance_medium"
+        android:textColor="@color/Raisin_Black"
+        app:drawableStartCompat="@drawable/eye"
+        app:drawableTint="@color/gray_700" />
+    <!--Download-->
+    <TextView
+        android:id="@+id/downloadsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/_5mdp"
+        android:textAppearance="@style/TextAppearance_medium"
+        android:textColor="@color/Raisin_Black"
+        app:drawableStartCompat="@drawable/download"
+        app:drawableTint="@color/gray_700" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/PageFlow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8mdp"
+        app:constraint_referenced_ids="likesTxt,viewsTxt,downloadsTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/userAvatarImg"
+        app:layout_constraintTop_toBottomOf="@id/txt_location" />
+    <!--Name-->
+    <!--Description-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

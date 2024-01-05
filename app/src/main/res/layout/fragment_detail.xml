@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.detail.DetailFragment">
+    <!--shimmer-->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:shimmer_duration="800">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_detail" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <!--background wallpaper-->
+        <ImageView
+            android:id="@+id/imgWall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            tools:src="@tools:sample/backgrounds/scenic" />
+    </HorizontalScrollView>
+    <!--back-->
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_26mdp"
+        android:layout_marginStart="@dimen/_12mdp"
+        android:src="@drawable/arrow_back"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:visibility="gone"/>
+    <!--BlurView-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/blur_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65mdp"
+        android:layout_marginHorizontal="@dimen/_22mdp"
+        android:layout_marginBottom="@dimen/_32mdp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="@dimen/_24mdp"
+        app:cardElevation="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_1mdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--random-->
+            <ImageView
+                android:id="@+id/img_information"
+                android:layout_width="@dimen/_40mdp"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginStart="@dimen/_16mdp"
+                android:background="@drawable/bg_shape_fav"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_4mdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/information"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--download-->
+            <ImageView
+                android:id="@+id/img_download"
+                android:layout_width="@dimen/_40mdp"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginEnd="@dimen/_16mdp"
+                android:background="@drawable/bg_shape_fav"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_4mdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/download"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--set wallpaper-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_wallpaper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10mdp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/set_wallpaper"
+                android:textAppearance="@style/TextAppearance_medium"
+                app:backgroundTint="#FC9802"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/img_download"
+                app:layout_constraintStart_toEndOf="@id/img_information"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rippleColor="@android:color/transparent"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp" />
+            <!--Progress-->
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/downloadLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4mdp"
+                android:layout_marginTop="@dimen/mines3mdp"
+                android:visibility="gone"
+                app:indicatorColor="@color/green"
+                app:indicatorSize="@dimen/_40mdp"
+                app:layout_constraintBottom_toBottomOf="@id/img_download"
+                app:layout_constraintEnd_toEndOf="@id/img_download"
+                app:layout_constraintStart_toStartOf="@id/img_download"
+                app:layout_constraintTop_toTopOf="@id/img_download"
+                app:trackColor="@android:color/transparent"
+                app:trackCornerRadius="@dimen/_5mdp"
+                app:trackThickness="@dimen/_2mdp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

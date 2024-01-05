@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Bright_Gray">#EBEBEB</color>
+    <color name="Raisin_Black">#232323</color>
+    <color name="Electric_Red">#e00704</color>
+    <color name="Jet">#363636</color>
+    <color name="Ghost_White">#FAFAF9</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_700">#616161</color>
+
+    <color name="green">#4CAF50</color>
+    <color name="blue">#2196F3</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="teal">#00BCD4</color>
+    <color name="purple">#9C27B0</color>
+    <color name="orange">#FF5722</color>
+    <color name="graniteGray">#6C5F5B</color>
+    <color name="red">#E91E63</color>
+    <color name="darkStrategy">#26272b</color>
+    <color name="colorOverlay">#00000000</color>
+
+</resources>

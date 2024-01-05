@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.imageview.ShapeableImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_140mdp"
+    android:layout_height="@dimen/_170mdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/_5mdp"
+    android:id="@+id/image"
+    app:shapeAppearanceOverlay="@style/RoundImageView"
+    tools:src="@tools:sample/backgrounds/scenic"
+    android:scaleType="fitXY">
+</com.google.android.material.imageview.ShapeableImageView>

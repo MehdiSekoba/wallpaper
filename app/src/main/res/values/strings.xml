@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">wallpaper</string>
+    <string name="checkConnection">Check your connection</string>
+    <string name="default_message">Check your Internet connection and try again.</string>
+    <string name="default_title">No Internet</string>
+    <string name="retry">Retry</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="category">Category</string>
+    <string name="random">Random</string>
+    <string name="my_download">My Download</string>
+    <string name="auto_wallpaper_setting">Auto Wallpaper Setting</string>
+    <string name="rate_this_app">Rate This App</string>
+    <string name="about">About</string>
+    <string name="_4k_wallpaper">4K Wallpaper</string>
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="close_drawer">close navigation drawer</string>
+    <string name="version">Version</string>
+    <string name="searchWallpaper">search Wallpaper</string>
+    <string name="black">black</string>
+    <string name="white">white</string>
+    <string name="red">red</string>
+    <string name="green">green</string>
+    <string name="blue">blue</string>
+    <string name="yellow">yellow</string>
+    <string name="teal">teal</string>
+    <string name="purple">purple</string>
+    <string name="orange">orange</string>
+    <string name="colorTone">The color tone</string>
+    <string name="ultra_4k_wallpaper_now">Elevate your screen with breathtaking visuals and dive into a world of endless possibilities.
+</string>
+    <string name="tryAgain">Try again!</string>
+    <string name="trend">Trending</string>
+    <string name="popular_categories">Popular Categories</string>
+    <string name="popular">Popular</string>
+    <string name="photos">Photos</string>
+    <string name="grant_permissions_for_the_app_to_function_properly">Grant permissions for the app to function properly</string>
+    <string name="open_setting">Open Setting</string>
+    <string name="set_wallpaper">Set wallpaper</string>
+    <string name="set_home_screen">Home screen</string>
+    <string name="set_lock_screen">Lock screen</string>
+    <string name="set_both">Set both</string>
+    <string name="cancel">Cancel</string>
+    <string name="empty">You have not downloaded anything yet</string>
+    <string name="granted_permissions">Granted: %s</string>
+    <string name="rationale_permissions">Rationale: %s</string>
+    <string name="permissions_required">Permissions required</string>
+    <string name="request_again">Request again</string>
+    <string name="permanently_denied_permissions">Permanently denied: %s</string>
+    <string name="action_settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="notFound">Not found any photo!</string>
+    <string name="searchCanNotBeEmpty">Search can not be empty!</string>
+    <string name="mehdi_sekoba">Mehdi Sekoba</string>
+    <string name="android_developer">Android Developer</string>
+    <string name="content_me">Content Me :</string>
+
+</resources>

@@ -1,0 +1,41 @@
+<com.google.android.material.carousel.MaskableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/carousel_container"
+    android:layout_width="@dimen/_120mdp"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/_2mdp"
+    android:layout_marginEnd="@dimen/_2mdp"
+    android:foreground="?attr/selectableItemBackground"
+    app:shapeAppearance="?attr/shapeAppearanceCornerExtraLarge">
+        <!---->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--image-->
+            <ImageView
+                android:id="@+id/carousel_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"/>
+            <!--avatar-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/avatar"
+                android:layout_width="@dimen/_40mdp"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="@dimen/_12mdp"
+                android:layout_marginBottom="@dimen/_12mdp"
+                android:padding="@dimen/_2mdp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:shapeAppearanceOverlay="@style/RoundImageViewProfile"
+                app:strokeColor="@color/white"
+                app:strokeWidth="@dimen/_1mdp"
+                tools:src="@tools:sample/backgrounds/scenic" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.carousel.MaskableFrameLayout>

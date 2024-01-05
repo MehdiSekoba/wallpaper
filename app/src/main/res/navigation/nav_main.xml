@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.mehdisekoba.wallpaper.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+    <!--Home-->
+    <action
+        android:id="@+id/actionToHome"
+        app:destination="@id/homeFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mehdisekoba.wallpaper.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/collectionsFragment"
+        android:name="com.mehdisekoba.wallpaper.ui.collections.CollectionsFragment"
+        android:label="fragment_collections"
+        tools:layout="@layout/fragment_collections" />
+    <fragment
+        android:id="@+id/randomFragment"
+        android:name="com.mehdisekoba.wallpaper.ui.random.RandomFragment"
+        android:label="fragment_random"
+        tools:layout="@layout/fragment_random" />
+
+    <!--Categories-->
+    <action
+        android:id="@+id/actionToCategories"
+        app:destination="@id/categoryFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.mehdisekoba.wallpaper.ui.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="photo"
+            app:argType="string" />
+    </fragment>
+    <!--Detail-->
+    <action
+        android:id="@+id/actionToDetail"
+        app:destination="@id/detailFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.mehdisekoba.wallpaper.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionDetailInfo"
+            app:destination="@id/detailInfoFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/detailInfoFragment"
+        android:name="com.mehdisekoba.wallpaper.ui.detail_info.DetailInfoFragment"
+        android:label="fragment_detail_info"
+        tools:layout="@layout/fragment_detail_info">
+        <argument
+            android:name="data"
+            app:argType="com.mehdisekoba.wallpaper.data.model.detail.ResponseDetail" />
+    </dialog>
+    <action
+        android:id="@+id/actionToCollectionDetail"
+        app:destination="@id/collectionsDetailFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    <fragment
+        android:id="@+id/collectionsDetailFragment"
+        android:name="com.mehdisekoba.wallpaper.ui.collections.detail.CollectionsDetailFragment"
+        android:label="fragment_collections_detail"
+        tools:layout="@layout/fragment_collections_detail">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloadFragment"
+        android:name="com.mehdisekoba.wallpaper.ui.download.DownloadFragment"
+        android:label="fragment_download"
+        tools:layout="@layout/fragment_download" />
+    <!--Search-->
+    <action
+        android:id="@+id/actionToSearch"
+        app:destination="@id/searchFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.mehdisekoba.wallpaper.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <argument
+            android:name="query"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.mehdisekoba.wallpaper.ui.about.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>

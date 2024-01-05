@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+    <!--Toolbar-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/_22mdp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/top_app_bar"
+        app:navigationIcon="@drawable/menu"
+        app:title="@string/_4k_wallpaper"
+        app:titleCentered="true" />
+    <!--List-->
+    <!--Scroll-->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollLay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_4mdp"
+        android:layout_marginBottom="@dimen/_36mdp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Toolbar">
+        <!--Container-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_Lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_6mdp">
+            <!--Banner-->
+            <com.mikelau.shimmerrecyclerviewx.ShimmerRecyclerViewX
+                android:id="@+id/rc_Banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160mdp"
+                android:layout_marginTop="@dimen/_4mdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:minHeight="@dimen/_20mdp"
+                android:paddingHorizontal="@dimen/_8mdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_grid_child_count="2"
+                app:shimmer_demo_layout="@layout/item_banner_shimmer"
+                app:shimmer_demo_layout_manager_type="linear_horizontal" />
+            <!--categories-->
+            <!--title-->
+            <TextView
+                android:id="@+id/txt_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4mdp"
+                android:layout_marginTop="@dimen/_6mdp"
+                android:text="@string/popular_categories"
+                android:textAppearance="@style/TextAppearance_Bold"
+                android:textColor="@color/gray_700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rc_Banner" />
+            <!--Recycler-->
+            <com.mikelau.shimmerrecyclerviewx.ShimmerRecyclerViewX
+                android:id="@+id/categoryRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6mdp"
+                android:clipToPadding="false"
+                android:minHeight="@dimen/_20mdp"
+                android:paddingHorizontal="@dimen/_8mdp"
+                app:layout_constraintTop_toBottomOf="@id/txt_categories"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_grid_child_count="10"
+                app:shimmer_demo_layout="@layout/item_category_shimmer"
+                app:shimmer_demo_layout_manager_type="linear_horizontal" />
+            <!--Recycler-->
+            <!--shimmer-->
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryRecycler"
+                app:shimmer_auto_start="true"
+                app:shimmer_duration="1500">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/categories_shimmer" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RandomRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6mdp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryRecycler" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
