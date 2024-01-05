@@ -32,6 +32,8 @@ Layout to create a seamless collapsing effect on the toolbar, offering an elegan
 
 7-Dedicated Dialogs for Wallpaper Settings**: Providing users with a dedicated dialog interface to set images as wallpapers for the home screen, lock screen, or both, ensuring a seamless customization experience.
 
+ 8-Move the image with swipe
+ 
 ![alt text](https://bayanbox.ir/view/8652757601280147373/Screenshot-2024-01-04-10-16-45-758-com.mehdisekoba.wallpaper.jpg)
 
 ![alt text](https://bayanbox.ir/view/236555473301537861/Screenshot-2024-01-04-10-17-26-654-com.mehdisekoba.wallpaper-1.jpg)
