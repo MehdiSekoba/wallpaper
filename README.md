@@ -1,6 +1,3 @@
-Certainly! Writing a good explanation for your GitHub repository involves highlighting the key features and functionalities of your project. Here's an example of how you might describe your project:
-
----
 
 **Project Description:**
 
